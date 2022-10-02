@@ -16,7 +16,7 @@ def image_convert(r , g , b):
 
     cv.imwrite('ImageSet/final_image.jpg', im_rgb)
     
-    return 
+    return im_rgb
 
 # Grayscale image containing red values
 red = cv.imread("ImageSet/JNCE_2022272_45C00088_V01-red.png",0)
