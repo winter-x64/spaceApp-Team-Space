@@ -1,0 +1,53 @@
+<!-- extends -->
+{% extends 'baseTemp.html' %}
+
+<!-- title -->
+{% block title %} Upload Img {% endblock title %}
+
+<!-- body -->
+{% block body %}
+
+<div
+    class="container d-flex align-items-center justify-content-center"
+    style="height: 720px"
+>
+    <div class="card w-50 shadow p-3 bg-body rounded">
+        <form action="/editor/upload" method="post">
+            <div class="card-title p-3"><h2>Upload Image</h2></div>
+            <div class="card-body">
+                <!-- Red image -->
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">R</label>
+                    <input class="form-control" type="file" id="formFile" />
+                </div>
+
+                <!-- Green image-->
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">G</label>
+                    <input class="form-control" type="file" id="formFile" />
+                </div>
+
+                <!-- Blue image -->
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">B</label>
+                    <input class="form-control" type="file" id="formFile" />
+                </div>
+                <br />
+                <br />
+
+                <div class="card-footer">
+                    <!-- submit and reset buttons -->
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-success" type="submit">
+                            Process
+                        </button>
+                        <button class="btn btn-secondary" type="reset">
+                            clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock body %}
