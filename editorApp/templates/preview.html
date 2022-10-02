@@ -1,0 +1,45 @@
+<!-- extent the base templates -->
+{% extends 'baseTemp.html' %}
+
+<!-- title -->
+{% block title %} preview page {% endblock title %}
+
+<!-- body -->
+{% block body %}
+
+<div
+    class="container d-flex align-items-center justify-content-center"
+    style="height: 720px"
+>
+    <div class="card shadow p-3 mb-5 bg-body rounded">
+        <img src="{{ finalImage }}" class="card-img-top" alt="Final Image" />
+        <div class="card-body">
+            <h5 class="card-title">Processed image</h5>
+        </div>
+        <div class="card-body">
+            <!-- submit and reset buttons -->
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a
+                    href="/downloads"
+                    class="btn btn-success"
+                    tabindex="-1"
+                    role="button"
+                    aria-disabled="true"
+                >
+                    Download
+                </a>
+                <a
+                    href="/editor/edit"
+                    class="btn btn-secondary"
+                    tabindex="-1"
+                    role="button"
+                    aria-disabled="true"
+                >
+                    Edit
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock body %}
+</div>

@@ -1,0 +1,71 @@
+{% extends 'baseTemp.html' %}
+
+<!-- title -->
+{% block title %} editor {% endblock title %}
+
+<!-- body -->
+{% block body %}
+<div
+    class="container d-flex align-items-center justify-content-center"
+    style="height: 750px"
+>
+    <div class="card mb-3" style="max-width: 1080px">
+        <div class="row g-0">
+            <div class="col-md-7">
+                <img
+                    src="/img/3628452.png"
+                    class="img-fluid rounded-start"
+                    alt="image"
+                />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Edit Image</h5>
+                    <p class="card-text">
+                        <!-- Brightness  -->
+                        <label for="customRange1" class="form-label"
+                            >Brightness</label
+                        >
+                        <input
+                            name="brightnessValue"
+                            type="range"
+                            class="form-range"
+                            id="customRange1"
+                        />
+                        <!-- Contrast  -->
+                        <label for="customRange1" class="form-label"
+                            >Contrast</label
+                        >
+                        <input
+                            name="contrastValue"
+                            type="range"
+                            class="form-range"
+                            id="customRange1"
+                        />
+                        <!-- Saturation  -->
+                        <label for="customRange1" class="form-label"
+                            >Sharpness</label
+                        >
+                        <input
+                            name="sharpnessValue"
+                            type="range"
+                            class="form-range"
+                            id="customRange1"
+                        />
+                        <!-- resize  -->
+                        <label for="customRange1" class="form-label"
+                            >Resize</label
+                        >
+                        <input
+                            name="resizeValue"
+                            type="range"
+                            class="form-range"
+                            id="customRange1"
+                        />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
